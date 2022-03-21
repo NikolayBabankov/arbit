@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+<article>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-6">
+        <div class="main_publish">
+          {{art.date}}
+        </div>
+        <h1 class="main_title">
+          {{art.title}}
+        </h1>
+        <img src="{{art.img}}" alt="" class="main_img">
+        <p class="main_answer">
+          {{art.text}}
+        </p>
+
+        <a href="/" class="article_rekl">
+          <img src='{% static "img/product.png" %}'alt="" class="article_rekl_img">
+          <div class="article_rekl_text">"Домашний Фермера" со скидкой ! </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="col-md-2 sidebar">
+  <div class="sidebar_block">
+    <a href="/" class="sidebar_block_link">
+      <img src='{% static "img/main2.jpg" %}' alt="" style="width: 100%;">
+      <div>Легкие деньги на сочных домашних фруктах</div>
+    </a>
+  </div>
+  {%for art in list %}
+  <div class="sidebar_block">
+    <a href="article/{{art.id}}/" class="sidebar_block_link">
+      <img src="{{art.img}}" alt="" style="width: 100%;">
+      <div>{{art.title}}</div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+
+{% endblock %}

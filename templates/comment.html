@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-10 col-md-6 comment">
+      <div class="comment_header">
+        <h2 class="comment_header_title">Комментарий</h2>
+        <div class="comment_btn">
+          <button class="comment_header_addbtn" >Добавить комментарий</button>
+        </div>
+      </div>
+      <div class="bottom_comment"></div>
+      
+
+      <form class="comment_form hidden" id="addTodoForm">
+        {% csrf_token %}
+        <div class="text-danger" id="recaptchaError"></div>
+        <div class="mb-3">
+          <input name = "name" type="text" class="form-control" id="todoTaskPost" required placeholder="Ваше имя">
+        </div>
+        <div class="mb-3">
+          <div class="input__wrapper">
+            <input type="file" name="file" id="input__file" class="input input__file">
+            <div class="comment_form_file">(Необязательно)</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea name="comment" class="comment_form_text" id="todoTaskPost1" rows="4" required placeholder = "Комментарий"></textarea>
+
+        </div>
+        <button type="submit" class="comment_form_btn">Отправить</button>
+      </form>
+
+      <div id="todoList">
+      </div>
+
+
+  
+  
+    </div>
+  </div>

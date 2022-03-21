@@ -1,0 +1,112 @@
+@media screen and (max-width: 1199px){
+    body .sale{
+        height: 555px;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+
+    body .enter_link {
+        font-size: 12px;
+    }
+    body header{
+        height: 50px;
+    }
+
+    body .sidebar {
+        right: 36px;
+        width: 95px;
+    }
+    .sidebar .sidebar_block_link{
+        font-size: 9px;
+        line-height: 10px;
+    }
+    body .main_title{
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+    body .one_p {
+        font-size: 14px;
+    }
+
+    .main .main_answer {
+        font-size: 14px;
+    }
+
+    .main .main_question{
+        font-size: 14px;
+    }
+
+    body .ria_logo_img{
+        width: 65px;
+
+    }
+    .header_row .ria_logo_text{
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    .comment_header .comment_header_title{
+        font-size: 14px;
+    }
+    .comment_header .comment_btn{
+        top: -5px;
+    }
+    .comment_header .comment_header_addbtn{
+        width: 151px;
+        height: 26px;
+        border: none;
+        font-size: 10px;
+    }
+
+    .comment_item .comment_item_text{
+        font-size: 15px;
+    }
+
+    body .article_rekl_img{
+        width: 250px;
+    }
+
+    form .Wheel_input{
+        width: 75% !important;
+    }
+}
+@media screen and (max-width: 767px){
+
+    body .kfk_text{
+        margin-top: 5px;
+        line-height: 15px;
+        font-size: 12px;
+    }
+
+    body .sale{
+        height: 525px;
+    }
+
+    .comment_item .comment_item_text{
+        font-size: 14px;
+    }
+
+    .comment_item .comment_item_header_name {
+        font-size: 12px;
+    }
+    
+    .comment_item .comment_item_header_time{
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    .sidebar {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 424px){
+
+    body .sale{
+        height: 595px;
+    }
+}

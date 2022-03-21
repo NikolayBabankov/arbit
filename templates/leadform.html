@@ -1,0 +1,106 @@
+{% load static %}
+
+{% if param == 1 %}
+
+<div class="sale">
+  <div class="sale_add">
+    <span>Дополнено: </span>
+  </div>
+  <div class="sale_text">
+    Специально для наших читателей официальный поставщик выделил 100 упаковок <strong> "Домашнего Фермера" для розыгрыша со скидкой ! </strong> 
+    <span class="sale_day">Каждый </span> (включительно) может принять <span class = "sale_red">участие в розыгрыше</span> и получить до трех упаковок из набора <strong>"Домашнего Фермера"</strong> со скидкой до 95%.      
+  </div>
+  <div class="sale_deadline">
+    Поторопитесь! Количество упаковок по акции ограничено и быстро заканчивается. <br>
+    <span>Осталось акционных упаковок: <strong> 9</strong></span>
+  </div>
+</div>
+
+<div class="spin-wrapper">
+  <center> <p style="text-align: center !important;"><b>Испытайте свою удачу! </b><br>Нажмите на колесо и попробуйте получить скидку на упаковку <b>"Домашнего Фермера"</b> до 95%! <br></p></center> 
+    <div class="wheel-wrarpper">
+        <div class="wheel">
+            <img alt="" class="wheel-img" src='{% static "img/circle.png" %}'>
+            <div class="wheel-cursor">
+                <img alt="" src='{% static "img/cursor.png" %}'><span class="cursor-text lt48" onclick="spin();"><b>ЖМИ</b></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="spin-result-wrapper">
+
+  <div class="pop-up-window">
+      <div class="close-popup"></div>
+      <span class="pop-up-heading">Поздравляем!</span>
+      <p class="pop-up-text">Вы можете получить упаковку из набора "Домашний Фермер" со скидкой 95%</p>
+      <a class="pop-up-button  scroll-bottom to_form" href="#">Ok</a>
+  </div>
+</div> 
+
+<div class="order_block" style="display:none">
+  <center><img src='{% static "img/product.png" %}' realsrc="" style="width: 50%;"></center><br>
+  
+
+    <form class="order_form form-horizontal" style="border: dashed;" id="formLead">
+      <center>
+        <br>
+      
+            <h4 style="padding-top: 15px; text-align: center;font-size: 18px;"> <span style="font-size: 22px;font-weight:bold">Поторопитесь!</span> <br> Чтобы зарезервировать упаковку <b>"Домашний Фермер"</b> 
+            <br>за <b style="color: red"><span class="new_price">990</span> <span class="currency_price">тенге</span>*</b> у Вас осталось:<br><br> <span class="time_remains" id="min">10</span> : <span class="time_remains" id="sec">00</span>
+            </h4>
+      </center>
+        <label>Имя:</label>
+        <br>
+        <input class="Wheel_input" type="text" name="name" placeholder="Ваше имя" required="required" id="first_name">
+        <br>
+        <label>Телефон:</label>
+        <br>
+        <input class="Wheel_input" type="tel" name="phone" placeholder="Ваш телефон" required id="lead_phone">
+        <br>
+
+        <button class="main-link" type="submit" id="orderSubmit">Заказать со скидкой</button>
+        <p style="margin-left: 20px;font-size: 0.9em;">*при покупке набора</p>
+  </form>
+</div> 
+{% else %}
+
+<div class="sale">
+  <div class="sale_add">
+    <span>Дополнено: </span>
+  </div>
+  <div class="sale_text" style="text-align: center;">
+    Специально для наших читателей официальный поставщик выделил 100 упаковок <strong> "Домашнего Фермера" со скидкой ! </strong> 
+    <span class="sale_day">Каждый </span> (включительно) может получить до трех упаковок из набора <strong>"Домашнего Фермера"</strong> со скидкой до 95%.      
+  </div>
+  <div class="sale_deadline">
+    Поторопитесь! Количество упаковок по акции ограничено и быстро заканчивается. <br>
+    <span>Осталось акционных упаковок: <strong> 9</strong></span>
+  </div>
+</div>
+
+<div class="order_block">
+  <center><img src='{% static "img/product.png" %}' realsrc="" style="width: 50%;"></center><br>
+  
+
+    <form class="order_form form-horizontal" style="border: dashed;" id="formLead">
+      <center>
+        <br>
+            <h4 style="padding-top: 15px; text-align: center;font-size: 18px;"> <span style="font-size: 22px;font-weight:bold">Поторопитесь!</span> <br> Чтобы зарезервировать упаковку <b>"Домашний Фермер"</b> 
+            <br>за <b style="color: red"><span class="new_price">990</span> <span class="currency_price">тенге</span>*</b> у Вас осталось:<br><br> <span class="time_remains" id="min1">10</span> : <span class="time_remains" id="sec1">00</span>
+            </h4>
+      </center>
+        <label>Имя:</label>
+        <br>
+        <input class="Wheel_input" type="text" name="name" placeholder="Ваше имя" required="required" id="first_name">
+        <br>
+        <label>Телефон:</label>
+        <br>
+        <input class="Wheel_input" type="tel" name="phone" placeholder="Ваш телефон" required id="lead_phone">
+        <br>
+
+        <button class="main-link" type="submit" id="orderSubmit">Заказать со скидкой</button>
+        <p style="margin-left: 20px;font-size: 0.9em;">*при покупке набора</p>
+  </form>
+</div> 
+{% endif %}

@@ -1,0 +1,192 @@
+@import 'media';
+@import 'comment';
+
+header {
+    background-color: #FFF;
+    height: 60px;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+    position: fixed;  
+    top: 0;  
+    z-index: 100;  
+    width: 100%;  
+}
+
+.show{
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+*{
+    font-family: Montserrat;
+}
+.sidebar{
+    margin-top: 150px;
+    position: absolute;  
+    top: 0;
+    right: 110px;  
+    width: 150px;  
+    &_block{
+        margin-bottom: 25px;
+        &_link{
+            font-size: 13px;
+            text-decoration: none;
+            color: #000;
+            line-height: 15px;
+        }
+    }
+}
+
+.sale {
+    background-color:#e8e8e8;
+    height: 300px;
+    padding: 10px 40px;
+    margin-bottom: 40px;
+    &_add{
+        font-size: 13px;
+    }
+    &_text{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    &_red{
+        color: red;
+    }
+    &_deadline{
+        font-style: italic;
+        margin-top: 20px;
+        text-align: center;
+        color: red;
+        font-size: 18px;
+        font-weight: 400;
+        span{
+            font-weight: 500;
+        }
+    }
+}
+
+.one_p{
+    font-weight: 400;
+}
+.main{
+    margin-top: 50px;
+    &_publish{
+        color: #767676;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 100px;
+    }
+    &_title{
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    &_img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &_question{
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    &_answer{
+        font-style: italic;
+        margin-top: 25px;
+        font-weight: 400;
+        span{
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+// }
+
+
+.logo {
+    display: flex;
+    text-decoration: none;
+}
+
+.header_row{
+    display: flex;
+}
+
+.enter{
+    position: absolute;
+    right: 50px;
+    top: 16px;
+}
+
+.enter_link{
+    text-decoration: none;
+}
+
+.ria_logo_img{
+    width: 70px;
+    margin-left: 20px;
+}
+
+.ria_logo_text{
+    font-size: 25px;
+    font-weight: bold;
+    color:#000;
+    line-height: 56px;
+    margin-left: 10px;
+}
+
+.modal_comment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: red;
+    z-index: 1010;
+}
+
+#anscomm{
+    opacity: 0;
+    animation: ani 1s forwards;
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.img_comment {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.article_rekl{
+    text-decoration: none;
+    &_text{
+        text-align: center;
+        margin-bottom: 40px;
+        color: red;
+    }
+
+    &_img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.kfk_logo{
+    width: 55px;
+}
+
+.kfk_text{
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-left: 10px;
+}
