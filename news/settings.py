@@ -57,7 +57,7 @@ SECRET_KEY = conf.S_KEY
 DEBUG = True
 
 
-ALLOWED_HOSTS = [ '127.0.0.1',]
+ALLOWED_HOSTS = ['kztg.picbuybot.ru' , '127.0.0.1',]
 
 
 # Application definition
@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'news.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'news',
+        'NAME': 'kztag',
         'USER': 'kolya',
         'PASSWORD': 'super123',
         'HOST': '127.0.0.1',
@@ -159,6 +159,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+
+
 
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),

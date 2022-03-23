@@ -10,7 +10,7 @@ class Article(models.Model):
     subtitle = models.TextField(max_length=256, verbose_name='Подзаголовок', blank=True, null=True)
     img = models.URLField(verbose_name='Ссылка картинки')
     text = models.TextField(verbose_name='Текст статьи')
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add = True)
 
     class Meta:
         ordering = ['-created_at']

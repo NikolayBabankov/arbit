@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Получение UTM меток http://127.0.0.1:8000/?utm_source=123123&utm_campaign=2131234413&utm_content=343242
   let params = (new URL(document.location)).searchParams;
-  const siteId = params.get("utm_source"),
+  const siteId = params.get("sub_id1"),
         campId = params.get("utm_campaign"),
         bannerId =params.get("utm_content");
 
@@ -83,10 +83,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const formDataLead = {
         name: leadForm.elements["first_name"].value,
         phone: leadForm.elements["lead_phone"].value,
-        utm_source: siteId,
+        sub_id1: siteId,
         utm_campaign: campId,
         utm_content: bannerId,
     }
+    console.log('formDataLead');
     leadForm.style.display = 'none';
     addComent(leadFormUrl, formDataLead);
     leadForm.reset();

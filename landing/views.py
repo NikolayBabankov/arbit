@@ -125,7 +125,7 @@ def leadViews(request):
             lid = data.get('payload')
             try:
                 objLead = Lead.objects.create(name = lid['name'], phone = lid['phone'], 
-                                    siteId = lid['utm_source'], campId = lid['utm_campaign'],
+                                    siteId = lid['sub_id1'], campId = lid['utm_campaign'],
                                     bannerId= lid['utm_content'])
             except:
                 logger.warning(data)
@@ -135,12 +135,9 @@ def leadViews(request):
                 "ip": ip,
                 "country_code": conf.country_code,
                 "phone": lid['phone'],
-                "name": lid['name']
+                "name": lid['name'],
+		"sub_id1": lid["sub_id1"]
             }
-            listUtm = ['utm_source', 'utm_campaign', 'utm_content']
-            for utm in listUtm:
-                if lid[utm] != None:
-                    dataLead[utm] = lid[utm]
 
             respLead = requestLead(dataLead)
             if respLead['success']:
